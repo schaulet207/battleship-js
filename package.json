@@ -1,0 +1,24 @@
+{
+  "name": "battleship",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --watch"
+  },  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schaulet207/battleship-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/schaulet207/battleship-js/issues"
+  },
+  "homepage": "https://github.com/schaulet207/battleship-js#readme",
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
