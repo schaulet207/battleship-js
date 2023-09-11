@@ -17,6 +17,7 @@ class Gameboard {
       for (let i = 0; i < 2; i++) {
         const gameboard = document.createElement('div');
         gameboard.classList.add('gameboard');
+        gameboard.id = `gameboard-${i}`;
   
         // Create a 10x10 grid
         for (let row = 0; row < this.gridSize; row++) {
@@ -24,6 +25,7 @@ class Gameboard {
             const cell = document.createElement('button');
             cell.classList.add('cell');
             cell.dataset.coordinates = `${row}-${col}`;
+            cell.dataset.gameboardIndex = i;
             gameboard.appendChild(cell);
           }
         }
@@ -35,7 +37,8 @@ class Gameboard {
       gameBoardElement.addEventListener('click', (event) => {
         if (event.target.classList.contains('cell')) {
           const coordinates = event.target.dataset.coordinates;
-          console.log(`Clicked cell coordinates: ${coordinates}`);
+          const gameboardIndex = event.target.dataset.gameboardIndex;
+          console.log(`Clicked cell coordinates: ${coordinates} | ${gameboardIndex}`);
         }
       });
     }
